@@ -52,6 +52,24 @@
       color: white;
       border: none;
     }
+
+    .settings {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+    }
+
+    #custom-timer-container {
+      display: none;
+      margin-top: 20px;
+    }
+
+    input {
+      width: 50px;
+      text-align: center;
+      padding: 5px;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
@@ -61,6 +79,21 @@
     <button class="start" id="start-btn">Start</button>
     <button class="reset" id="reset-btn">Reset</button>
     <button class="break" id="break-btn">Switch to Break</button>
+    <button class="settings" id="settings-btn">Settings</button> <!-- Settings Button -->
+    <button id="customize-btn">Customize Timer</button>
+
+    <!-- Hidden by default, appears when "Customize Timer" is clicked -->
+    <div id="custom-timer-container">
+      <div>
+        <label for="custom-work-time">Work Duration (minutes):</label>
+        <input type="number" id="custom-work-time" value="25" min="1" />
+      </div>
+      <div>
+        <label for="custom-break-time">Break Duration (minutes):</label>
+        <input type="number" id="custom-break-time" value="5" min="1" />
+      </div>
+      <button id="save-custom-btn">Save</button>
+    </div>
   </div>
 
   <script src="renderer.js"></script>
